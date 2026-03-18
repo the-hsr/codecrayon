@@ -34,6 +34,11 @@ A customizable code snippet generator built for creating beautiful, shareable co
 
 ---
 
+## Snapshot
+![Screenshot](https://github.com/the-hsr/codecrayon/blob/main/assets/Screenshot.png)
+
+---
+
 ## Getting Started
 
 ### 1. Clone the repository
