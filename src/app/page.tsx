@@ -14,7 +14,20 @@ import 'prismjs/components/prism-swift';
 import 'prismjs/themes/prism-tomorrow.css'; 
 
 export default function CodeCrayon() {
-  const [code, setCode] = useState(`// All features combined!\nconst app = () => {\n  console.log("OS styles, Padding, Themes, & Lines");\n};`);
+  const [code, setCode] = useState(`const debounce = (fn, delay = 300) => {
+  let timeout;
+
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), delay);
+  };
+};
+
+const onResize = debounce(() => {
+  console.log("Resized");
+}, 250);
+
+window.addEventListener("resize", onResize);`);
   const [title, setTitle] = useState("app.js");
   const [windowStyle, setWindowStyle] = useState<'mac' | 'windows'>('mac');
   const [padding, setPadding] = useState(64);
